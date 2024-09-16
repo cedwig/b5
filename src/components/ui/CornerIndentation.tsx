@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 type CornerIndentationProps = {
   className?: string
@@ -19,9 +19,9 @@ export const CornerIndentation = ({
 
   return (
     // Pass a text-color style to change svgs color (e.g. using tailwind: "text-green-100", for a light green color)
-    <div className={clsx('bg-inherit', className)} {...rest}>
+    <div className={twMerge('bg-inherit', className)} {...rest}>
       <svg
-        className={clsx('fill-current w-full h-auto', transformClass)}
+        className={twMerge('fill-current w-full h-auto', transformClass)}
         preserveAspectRatio="none"
         data-bbox="0 0 160 63.119"
         xmlns="http://www.w3.org/2000/svg"
